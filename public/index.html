@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <!--
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link
-     rel="manifest" href="%PUBLIC_URL%/manifest.json">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -21,70 +20,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-    <script>
-      
-    var TabBlock = {
-  s: {
-    animLen: 200
-  },
-  
-  init: function() {
-    TabBlock.bindUIActions();
-    TabBlock.hideInactive();
-  },
-  
-  bindUIActions: function() {
-    $('.tabBlock-tabs').on('click', '.tabBlock-tab', function(){
-      TabBlock.switchTab($(this));
-    });
-  },
-  
-  hideInactive: function() {
-    var $tabBlocks = $('.tabBlock');
-    
-    $tabBlocks.each(function(i) {
-      var 
-        $tabBlock = $($tabBlocks[i]),
-        $panes = $tabBlock.find('.tabBlock-pane'),
-        $activeTab = $tabBlock.find('.tabBlock-tab.is-active');
-      
-      $panes.hide();
-      $($panes[$activeTab.index()]).show();
-    });
-  },
-  
-  switchTab: function($tab) {
-    var $context = $tab.closest('.tabBlock');
-    
-    if (!$tab.hasClass('is-active')) {
-      $tab.siblings().removeClass('is-active');
-      $tab.addClass('is-active');
-   
-      TabBlock.showPane($tab.index(), $context);
-    }
-   },
-  
-  showPane: function(i, $context) {
-    var $panes = $context.find('.tabBlock-pane');
-   
-    // Normally I'd frown at using jQuery over CSS animations, but we can't transition between unspecified variable heights, right? If you know a better way, I'd love a read it in the comments or on Twitter @johndjameson
-    $panes.slideUp(TabBlock.s.animLen);
-    $($panes[i]).slideDown(TabBlock.s.animLen);
-  }
-};
+  <title>React App</title>
+  <script>
 
-$(function() {
-  TabBlock.init();
-});
-    </script>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-    <!--
+  </script>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -94,5 +41,7 @@ $(function() {
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+</body>
+
 </html>
