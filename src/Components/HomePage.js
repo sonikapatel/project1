@@ -4,7 +4,7 @@ const HomePageComponent = () => {
     return (
       <div>
  <div className="split left">
-        <div class="centered"> 
+        <div class="centered">
         <h3>  <span style= {{fontFamily: 'GT-W-Normal'}}>YouX</span>Portfolios</h3>
         <p style = {{color: '#3F71AE'}}>Feedback tailored for your design portfolio by professional experts. </p>
         <br></br>
@@ -29,7 +29,7 @@ const HomePageComponent = () => {
            <input class = "leftTextInput" type="text" name="password" placeholder="Password"/>
            <input class="rightTextInput" type="text" name="password" placeholder="Confirm Password"/>
           <button class="buttonSign"> Sign Up</button>
-          
+
             </div>
             <div className="tabBlock-pane">
             <h1>Sign on to your account</h1>
@@ -39,11 +39,11 @@ principles and receive feedback from professionals.</h2>
 <input class = "emailTextInput" type="text" name="email" placeholder="Password"/>
 <button class="buttonSign"> <a href= "/portfolios">Log In</a></button>
 
-  
+
             </div>
           </div>
         </figure>
-          
+
       </div>
       </div>
     );
